@@ -1,15 +1,15 @@
-// increment count when button is clicked
-
-let countEl = document.getElementById("count-el");
-let count = 0;
+let countEl = document.getElementById("count-el")
+let saveEl = document.getElementById("save-el")
+let count = 0
 
 function increment() {
-    count += 1;
-    countEl.innerText = count;
-};
-
-// save count when button is clicked
+    count += 1
+    countEl.textContent = count
+}
 
 function save() {
-    console.log(count)
+    let saveCount = count + " - "
+    saveEl.textContent += saveCount
+    countEl.textContent = 0
+    count = 0
 }
